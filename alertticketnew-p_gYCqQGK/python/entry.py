@@ -26,7 +26,6 @@ def handler(pd: "pipedream"):
 
     access_token = requests.post(HALO_AUTH_URL, data=auth_body, timeout=10).json().get('access_token')
 
-
     headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json',

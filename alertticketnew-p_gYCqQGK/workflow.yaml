@@ -1,5 +1,5 @@
 schema: workflow/2022.04
-name: AlertTicketNew
+name: AlertTicketSync
 settings:
   auto_retry: true
   error_notification: true
