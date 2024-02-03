@@ -1,0 +1,23 @@
+schema: workflow/2022.04
+name: DeleteStaleRecordsinAirTable
+settings:
+  error_notification: true
+triggers:
+- id: hi_Y4HbgJ1
+steps:
+- namespace: delete_record
+  runtime: nodejs18.x
+  uses: airtable_oauth-delete-record@0.0.2
+  props:
+    airtable:
+      authProvisionId: apn_b6hwgEX
+    baseId:
+      __lv:
+        label: DattoAlerts
+        value: app4m2DT8q6ehwJR2
+    tableId:
+      __lv:
+        label: Alerts
+        value: tbldMxWMcwVt3R51P
+    recordId: '{{steps.trigger.event.body.fields["Record ID"]}}'
+

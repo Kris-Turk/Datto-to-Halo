@@ -1,0 +1,29 @@
+schema: workflow/2022.04
+name: AlertTicketNew
+settings:
+  auto_retry: true
+  error_notification: true
+triggers:
+- id: dc_L3ubGlK
+steps:
+- namespace: python
+  runtime: python3.8
+  uses: "./python/entry.py"
+- namespace: update_record
+  runtime: nodejs18.x
+  uses: airtable_oauth-update-record@0.0.3
+  _props_cursor: dyp_BrUv28L
+  props:
+    airtable:
+      authProvisionId: apn_b6hwgEX
+    baseId:
+      __lv:
+        label: DattoAlerts
+        value: app4m2DT8q6ehwJR2
+    tableId:
+      __lv:
+        label: Alerts
+        value: tbldMxWMcwVt3R51P
+    recordId: '{{steps.trigger.event.fields["Record ID"]}}'
+    field_HaloTicketID: "{{steps.python.$return_value.id}}"
+
