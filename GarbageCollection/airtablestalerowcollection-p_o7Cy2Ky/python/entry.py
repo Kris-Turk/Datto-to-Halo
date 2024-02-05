@@ -24,7 +24,7 @@ def handler(pd: "pipedream"):
         last_modified_date_time = datetime.strptime(last_modified_string, '%Y-%m-%dT%H:%M:%S.%fZ')
 
         # Check if the status is 'Closed' and last modified date is older than 24 hours
-        if status == "Closed" and (current_time - last_modified_date_time > timedelta(hours=6)):
+        if status == "Closed" and (current_time - last_modified_date_time > timedelta(hours=24)):
             # Make an HTTP request to another Pipedream function
             response = requests.post(pipedream_function_url, json=record)
 
