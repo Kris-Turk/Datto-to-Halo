@@ -25,5 +25,5 @@ steps:
         label: Alerts
         value: tbldMxWMcwVt3R51P
     recordId: '{{steps.trigger.event.fields["Record ID"]}}'
-    field_HaloTicketID: "{{steps.python.$return_value.id}}"
+    field_HaloTicketID: "{{steps.python.$return_value.hdid}}"
 
