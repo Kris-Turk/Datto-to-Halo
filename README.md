@@ -45,3 +45,11 @@ Garbage Collection -
 ​	Delete the records that are stale: https://pipedream.com/new?h=tch_5ofXlz
 
 **Git Repo:** [Kris-Turk/Datto-to-Halo (github.com)](https://github.com/Kris-Turk/Datto-to-Halo/)
+
+
+
+#### How to use:
+
+Will provide link to You tube video in the next few weeks. If you can't wait for that there are two options... Use my 3 shareable links to automatically create my flows in your pipedream, review the flows and make sure to create the required variables for the python script, they should be obvious if you look out for the "os.environ"
+
+Option 2 would be to create a new project and sync it to your own git hub, simply copy my git repo into your new project one and push it back up for pipedream to pick it up.
