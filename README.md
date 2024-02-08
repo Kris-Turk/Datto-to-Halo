@@ -30,6 +30,18 @@ At the time of writing this is a MVP (minimum viable product) as there is some l
 
 
 
-#### Shameless Plug :)
+#### Shameless Plug :) - Affiliate link
 
 If this Automation looks like it will help you please consider using my Pipedream affiliate link to sign up for Pipedream even if you initially just want to he free tier it could be a huge help to me in the future: http://pipedream.com/?via=kris
+
+#### Shareable Links
+
+Alert ticket Sync: https://pipedream.com/new?h=tch_BXfyAp
+
+Garbage Collection - 
+
+​	Stale Row collection: https://pipedream.com/new?h=tch_egfArV
+
+​	Delete the records that are stale: https://pipedream.com/new?h=tch_5ofXlz
+
+**Git Repo:** [Kris-Turk/Datto-to-Halo (github.com)](https://github.com/Kris-Turk/Datto-to-Halo/)
