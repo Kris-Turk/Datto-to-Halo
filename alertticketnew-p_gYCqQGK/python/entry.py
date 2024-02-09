@@ -78,8 +78,9 @@ def handler(pd: "pipedream"):
             ticket_payload
             ])
 
-
         response = requests.post(CREATE_TICKET_URL, headers=headers, data=json_payload)
+
+        ticket_id = response.json()['id']
 
     elif pd.steps["trigger"]["event"]["type"] == 'record_modified':
 
@@ -112,6 +113,9 @@ def handler(pd: "pipedream"):
         update_ticket_payload
         ])
 
-        response = requests.post(ACTIONS_URL, headers=headers, data=json_payload)    
+        response = requests.post(ACTIONS_URL, headers=headers, data=json_payload)
+        
+        ticket_id = response.json()['ticket_id']
+            
 
-    return response.json()
+    return ticket_id
