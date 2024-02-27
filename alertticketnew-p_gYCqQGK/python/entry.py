@@ -101,6 +101,7 @@ def handler(pd: "pipedream"):
         "new_status": 9,
         "outcome_id": 4,  
         "sendemail": False,
+        "new_category1": "Server Support>Resource Issue (Disk, RAM, CPU, NIC)",
         "customfields": [
             {
                 "id": "215",
