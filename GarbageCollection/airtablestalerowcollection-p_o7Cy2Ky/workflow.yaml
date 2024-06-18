@@ -6,7 +6,7 @@ triggers:
 - id: ti_ooT6kDR
 steps:
 - namespace: list_records
-  runtime: nodejs18.x
+  runtime: nodejs20.x
   uses: airtable_oauth-list-records@0.0.2
   props:
     airtable:
@@ -20,6 +20,6 @@ steps:
         label: Alerts
         value: tbldMxWMcwVt3R51P
 - namespace: python
-  runtime: python3.8
+  runtime: python3.12
   uses: "./python/entry.py"
 
