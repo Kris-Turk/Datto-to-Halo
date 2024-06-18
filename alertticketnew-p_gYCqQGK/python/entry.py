@@ -116,7 +116,6 @@ def handler(pd: "pipedream"):
 
         response = requests.post(ACTIONS_URL, headers=headers, data=json_payload)
         
-        ticket_id = response.json()['ticket_id']
-            
+        ticket_id = response.json()['ticket_id']            
 
     return ticket_id
