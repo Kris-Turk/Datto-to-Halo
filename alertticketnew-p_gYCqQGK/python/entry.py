@@ -44,7 +44,7 @@ def handler(pd: "pipedream"):
     alert_type = pd.steps["trigger"]["event"]["fields"]["alert_type"]
     alert = pd.steps["trigger"]["event"]["fields"]["alert"]
     alert_message = pd.steps["trigger"]["event"]["fields"]["alert_message"]
-    last_user = pd.steps["trigger"]["event"]["fields"]["last_user"]
+    last_user = pd.steps["trigger"]["event"]["fields"].get("last_user", None)
     alert_category = pd.steps["trigger"]["event"]["fields"]["alert_category"]
     alert_time = datetime.now(pytz.timezone('Pacific/Auckland')).strftime('%d/%m/%Y %H:%M')
 

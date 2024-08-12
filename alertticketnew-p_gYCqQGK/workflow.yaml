@@ -10,8 +10,8 @@ steps:
   runtime: python3.12
   uses: "./python/entry.py"
 - namespace: update_record
-  runtime: nodejs18.x
-  uses: airtable_oauth-update-record@0.0.3
+  runtime: nodejs20.x
+  uses: airtable_oauth-update-record@0.0.7
   _props_cursor: dyp_BrUv28L
   props:
     airtable:
