@@ -17,7 +17,7 @@ def handler(pd: "pipedream"):
     CLIENTS_URL = HALO_RESOURCE_URL + '/Client'
     ACTIONS_URL = HALO_RESOURCE_URL + '/Actions'
 
-    auth_body = { 
+    auth_body = {
            'grant_type': 'client_credentials',
            'client_id': HALO_CLIENT_ID,
            'client_secret': HALO_SECRET,
@@ -61,7 +61,7 @@ def handler(pd: "pipedream"):
         The alert was triggered at: {alert_time}</p>"""
 
 
-        ticket_payload = {   
+        ticket_payload = {
             "dateoccured": datetime.now().isoformat(),
             "summary": f'{hostname} | {client_name} | {alert_type} | {alert}', # Needs customizing
             "details_html": ticket_text,
@@ -95,11 +95,11 @@ def handler(pd: "pipedream"):
         <p>{alert_category} monitor for {alert_type} to alert if {alert}</p>
         The alert was resolved at: {alert_time}</p>"""
 
-        update_ticket_payload = {   
+        update_ticket_payload = {
         "ticket_id": ticket_id,
         "note_html": ticket_text,
         "new_status": 9,
-        "outcome_id": 4,  
+        "outcome_id": 4,
         "sendemail": False,
         "new_category1": "Server Support>Resource Issue (Disk, RAM, CPU, NIC)",
         "customfields": [
@@ -115,7 +115,7 @@ def handler(pd: "pipedream"):
         ])
 
         response = requests.post(ACTIONS_URL, headers=headers, data=json_payload)
-        
-        ticket_id = response.json()['ticket_id']            
+
+        ticket_id = response.json()['ticket_id']
 
     return ticket_id

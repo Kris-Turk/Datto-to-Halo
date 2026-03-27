@@ -22,4 +22,3 @@ steps:
 - namespace: python
   runtime: python3.12
   uses: "./python/entry.py"
-

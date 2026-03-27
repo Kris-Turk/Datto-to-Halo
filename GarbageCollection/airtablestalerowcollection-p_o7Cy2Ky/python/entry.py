@@ -5,7 +5,7 @@ import time
 
 
 def handler(pd: "pipedream"):
-    
+
     # Array to store records that meet the criteria
     records_to_return = []
 
